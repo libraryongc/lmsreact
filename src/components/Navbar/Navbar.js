@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
-import logoImg from "../../images/logo.png";
+import logo1Img from "../../images/logo1.png";
 import {HiOutlineMenuAlt3} from "react-icons/hi";
 
 const Navbar = () => {
@@ -10,10 +10,10 @@ const Navbar = () => {
 
   return (
     <nav className='navbar' id = "navbar">
-      <div className='container navbar-content flex'>
+      <div className='container navbar-content '>
         <div className='brand-and-toggler flex flex-sb'>
           <Link to = "/" className='navbar-brand flex'>
-            <img src = {logoImg} alt = "site logo" />
+            <img src = {logo1Img} alt = "site logo"  />
             <span className='text-uppercase fw-7 fs-24 ls-1'>Library/ON</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
@@ -28,6 +28,12 @@ const Navbar = () => {
             </li>
             <li className='nav-item'>
               <Link to = "about" className='nav-link text-uppercase  fs-22 fw-6 ls-1'>about</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to = "contact" className='nav-link text-uppercase  fs-22 fw-6 ls-1'>contact</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to = "logout" className='nav-link text-uppercase fs-22 fw-6 ls-1'><i class="bi bi-box-arrow-right"></i>logout</Link>
             </li>
           </ul>
         </div>
